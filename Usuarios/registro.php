@@ -7,7 +7,7 @@
     <title>Mi portafolio - ¿Quién soy?</title>
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
     <header>
@@ -35,7 +35,7 @@
            
             <div class="col-md-12 col-lg-12 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form>
+                <form action="InsertarUsuario.php" method="Post">
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <span class="h1 fw-bold mb-0">REGISTRAR</span>
@@ -43,29 +43,29 @@
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Datos del usuarios</h5>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form2Example17" class="form-control form-control-lg" />
+                    <input type="text" name="nombre" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example17">Nombre</label>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form2Example17" class="form-control form-control-lg" />
+                    <input type="text" name="apellidoPaterno" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example17">Apellido Paterno</label>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="text" id="form2Example17" class="form-control form-control-lg" />
+                    <input type="text" name="apellidoMaterno" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example17">Apellido Materno</label>
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                    <input type="email" name="correo" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example17">Correo</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                    <input type="password" name="password" class="form-control form-control-lg" />
                     <label class="form-label" for="form2Example27">Password</label>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Guardar</button>
+                    <input class="btn btn-dark btn-lg btn-block"  type="submit" value="Guardar">
                   </div>
                   
                 </form>
