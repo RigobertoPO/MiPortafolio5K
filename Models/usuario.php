@@ -19,5 +19,20 @@ class Usuario{
         return false;
     }
    }
+   public function AutentificarUsuario($correo,$password){
+        try {
+            include 'conexion.php';
+            $conectar=new Conexion();
+            $consulta=$conectar->prepare("SELECT * FROM Usuarios
+                    WHERE  Correo=:correo AND Password=:password");
+            $consulta->bindParam(":correo",$correo,PDO::PARAM_STR);
+            $consulta->bindParam(":password",$password,PDO::PARAM_STR);
+            $consulta->execute();
+            $consulta->setFetchMode(PDO::FETCH_ASSOC);
+            return $consulta->fetchAll();      
+        } catch (Exception $th) {
+            return 0;
+        }
+   }
 }
 ?>
