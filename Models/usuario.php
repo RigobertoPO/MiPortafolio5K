@@ -31,6 +31,7 @@ class Usuario{
             $consulta->setFetchMode(PDO::FETCH_ASSOC);
             return $consulta->fetchAll();      
         } catch (Exception $th) {
+            //echo $th->getMessage();
             return 0;
         }
    }

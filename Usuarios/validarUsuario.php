@@ -5,11 +5,11 @@
   $usuario=new Usuario();
   $resultado=$usuario->AutentificarUsuario($correo,$password);
   if(count($resultado)>0){
-    echo 'encontrado';
-    //header("Location:../index.php");
+    //echo 'encontrado';
+    header("Location:../index.php");
   }
   else{
-    echo 'encontrado';
-    //header("Location:login.php");
+    //echo 'no encontrado';
+    header("Location:login.php");
   }
 ?>
