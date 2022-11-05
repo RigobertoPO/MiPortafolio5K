@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_SESSION['nombreUsuario'])){
+        $usuarioSesion=$_SESSION['nombreUsuario'];
+        $tipoUsuario=$_SESSION['tipo'];
+    }
+    else{
+        $usuarioSesion='';
+        $tipoUsuario=0;
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +29,18 @@
                  <li><a href="portafolio.php">PortaFolio</a></li>
                  <li><a href="blog.php">blog</a></li>
                  <li><a href="contacto.php">Contactos</a></li>
+                 <li>
+                    <?php             
+                        if($usuarioSesion==''){
+                            echo '<a href="Usuarios/login.php">Iniciar sesión</a>';
+                        }
+                        else{
+                            echo '<label>'.$usuarioSesion.'</label>';
+                            echo '<a href="Usuarios/logout.php">Cerrar sesión</a>';
+                        }                  
+                    ?>
+                    
+                 </li>
              </ul>          
         </div>
      </nav> 

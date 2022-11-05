@@ -6,7 +6,15 @@
   $resultado=$usuario->AutentificarUsuario($correo,$password);
   if(count($resultado)>0){
     //echo 'encontrado';
-    header("Location:../index.php");
+    foreach ($resultado as $registro) {
+      session_start();
+      $_SESSION['idUsuario']=$registro['ID'];
+      $_SESSION['nombreUsuario']=$registro['Correo'];
+      $_SESSION['tipo']=$registro['Tipo'];
+      //echo$registro['Correo'];
+      header("Location:../index.php");
+    }
+    
   }
   else{
     //echo 'no encontrado';
