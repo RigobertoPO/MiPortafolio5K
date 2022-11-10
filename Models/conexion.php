@@ -1,7 +1,7 @@
 <?php
     class Conexion extends PDO{
         private $hostBD='localhost';
-        private $nombreBD='portafolio5k';
+        private $nombreBD='portafolio5';
         private $usuarioBD='root';
         private $passwordBD='';
         public function __construct(){
