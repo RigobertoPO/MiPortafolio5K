@@ -8,7 +8,6 @@
         $usuarioSesion='';
         $tipoUsuario=0;
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

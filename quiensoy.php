@@ -31,7 +31,17 @@
                  <li><a href="contacto.php">Contactos</a></li>
                  <li>
                     <?php             
+                        if($tipoUsuario==1){
+                            
+                            echo '<a href="proyectos.php">Proyectos</a>';
+                        }
+                                        
+                    ?>
+                    </li>
+                 <li>
+                    <?php             
                         if($usuarioSesion==''){
+                           
                             echo '<a href="Usuarios/login.php">Iniciar sesión</a>';
                         }
                         else{

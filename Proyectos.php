@@ -31,7 +31,17 @@
                  <li><a href="contacto.php">Contactos</a></li>
                  <li>
                     <?php             
+                        if($tipoUsuario==1){
+                            
+                            echo '<a href="proyectos.php">Proyectos</a>';
+                        }
+                                        
+                    ?>
+                    </li>
+                 <li>
+                    <?php             
                         if($usuarioSesion==''){
+                           
                             echo '<a href="Usuarios/login.php">Iniciar sesión</a>';
                         }
                         else{
@@ -47,6 +57,7 @@
    </header>
    <section id="Portafolio">
     <h1>Proyectos</h1>
+    <a href="Proyectos/NuevoProyecto.php">Agregar proyecto</a>
     <div class="Portafolio-content">
         <?php
         require_once 'Models/proyecto.php';
@@ -59,7 +70,8 @@
                                     <a href="http://">
                                         <img src="img/escritorio.jpg" alt="web">
                                     </a>  
-                                    <td><?php echo $registro['Nombre'] ?></td>             
+                                    <h4><?php echo $registro['Nombre'] ?></h4>  
+                                    <p><?php echo $registro['Descripcion'] ?></p>             
                                 </div> 
                                 <tr> 
                             <?php
